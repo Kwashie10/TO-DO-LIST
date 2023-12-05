@@ -8,7 +8,7 @@
         v-model="newtodo"
         @keyup.enter="addtodos"
       />
-      <button id="Add-item" @click="AddTodo(index)">Add</button>
+      <button class="Add-item" @click="AddTodo(index)">Add</button>
     </div>
 
     <transition-group
@@ -220,12 +220,13 @@ export default {
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
 
 .todo-input {
-  width: 70%;
-  padding: 10px 18px;
-  font-size: 20px;
+  width: 50%;
+  padding: 10px 14px;
+  font-size: 16px;
   border-radius: 5px;
-  margin-bottom: 16px;
+  margin-bottom: 9px;
   color: white;
+  background-color: black;
 
   &:focus {
     outline: 0;
@@ -233,7 +234,7 @@ export default {
 }
 
 .todo-item {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -243,15 +244,15 @@ export default {
 
 .remove-item {
   cursor: pointer;
-  margin-left: 14px;
+  margin-left: 8px;
   &:hover {
     color: black;
   }
 }
-#Add-item {
+.Add-item {
   position: absolute;
   cursor: pointer;
-  margin-left: 6px;
+  margin-left: 4px;
   float: right;
   background-color: black;
   color: white;
@@ -280,17 +281,17 @@ export default {
 }
 
 .todo-item-label {
-  padding: 10px;
-  margin-left: 12px;
+  padding: 8px;
+  margin-left: 8px;
 }
 
 .todo-item-edit {
-  font-size: 24px;
+  font-size: 14px;
   color: #2c3e50;
-  margin-left: 12px;
+  margin-left: 8px;
   background-color: white;
   width: 100%;
-  padding: 10px;
+  padding: 8px;
   border: 2px solid black;
   font-family: Arial, Helvetica, sans-serif;
 
@@ -299,7 +300,7 @@ export default {
   }
 }
 .edit-btn {
-  margin-left: 42px;
+  margin-left: 20px;
   padding: 10px;
   color: white;
 
@@ -317,22 +318,22 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 16px;
+  font-size: 12px;
   border-top: 1px solid lightgray;
-  padding-top: 14px;
-  margin-bottom: 14px;
+  padding-top: 10px;
+  margin-bottom: 10px;
   color: white;
 }
 
 button {
-  font-size: 19px;
+  font-size: 14px;
   background-color: black;
   color: white;
   appearance: none;
   border: 1px solid black;
   border-radius: 4px;
-  padding: 10px 16px;
-  margin-left: 12px;
+  padding: 8px 12px;
+  margin-left: 8px;
   cursor: pointer;
 
   &:hover {
@@ -377,5 +378,18 @@ button {
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+  .todo-input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .extra-container {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
 }
 </style>
