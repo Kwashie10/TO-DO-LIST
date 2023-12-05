@@ -28,7 +28,7 @@ export default {
   margin: 0 auto;
   padding: 10px;
   text-align: center;
-  border: 5px solid black;
+  border: 5px solid blue;
 }
 
 #app {
