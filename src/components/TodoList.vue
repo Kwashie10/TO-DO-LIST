@@ -2,17 +2,15 @@
   <div>
     <div>
       <input
-      type="text"
-      class="todo-input"
-      placeholder="what needs to be done"
-      v-model="newtodo"
-      @keyup.enter="addtodos"
-    />
-    <button id="Add-item" @click="AddTodo(index)">
-        Add
-      </button>
+        type="text"
+        class="todo-input"
+        placeholder="what needs to be done"
+        v-model="newtodo"
+        @keyup.enter="addtodos"
+      />
+      <button id="Add-item" @click="AddTodo(index)">Add</button>
     </div>
-    
+
     <transition-group
       name="fade"
       enter-active-class="animated fadeInup"
@@ -44,18 +42,14 @@
             @keyup.esc="cancelEdit(todo)"
             v-focus
           />
-          
+
           <div class="edit-btn" @click="editTodo(todo)">
-          
-          <button class=" edit-btn">Edit</button>
-        
-        </div>
+            <button class="edit-btn">Edit</button>
+          </div>
         </div>
 
         <div class="remove-item" @click="removeTodo(index)">
-          
-          <button class=" del-btn">delete</button>
-        
+          <button class="del-btn">delete</button>
         </div>
       </div>
     </transition-group>
@@ -179,7 +173,6 @@ export default {
     editTodo(todo) {
       this.beforeEditCache = todo.title;
       todo.editing = true;
-      
     },
     doneEdit(todo) {
       if (todo.title.trim() == "") {
@@ -210,9 +203,7 @@ export default {
 
       this.newtodo = "";
       this.idForTodo++;
-   
     },
-
 
     CheckAllTodos() {
       this.todos.forEach((todo) => (todo.completed = event.target.checked));
@@ -222,9 +213,7 @@ export default {
       this.todos = this.todos.filter((todo) => !todo.completed);
     },
   },
-
 };
-
 </script>
 
 <style lang="scss">
@@ -266,18 +255,15 @@ export default {
   float: right;
   background-color: black;
   color: white;
-  
+
   &:hover {
     background-color: blue;
   }
-
-  
 }
 
 .todo-item-right {
   display: flex;
   align-items: center;
-  
 }
 
 .todo-item-checkbox {
@@ -312,24 +298,19 @@ export default {
     outline: none;
   }
 }
-.edit-btn{
+.edit-btn {
   margin-left: 42px;
   padding: 10px;
-color: white;
-
+  color: white;
 
   &:focus {
     outline: none;
+  }
 }
-}
-
-
-
 
 .completed {
   text-decoration: line-through;
   color: gray;
-  
 }
 
 .extra-container {
@@ -341,7 +322,6 @@ color: white;
   padding-top: 14px;
   margin-bottom: 14px;
   color: white;
-  
 }
 
 button {
@@ -355,25 +335,19 @@ button {
   margin-left: 12px;
   cursor: pointer;
 
-
-  
-
   &:hover {
-   background-color: blue ;
-
-    
+    background-color: blue;
   }
 
   &:focus {
     outline: none;
   }
-  
 }
 .active {
   background-color: blue;
 }
 
-.del-btn{
+.del-btn {
   background-color: red;
   color: white;
 }
@@ -389,7 +363,6 @@ button {
 
 .todo-item-checkbox {
   margin-right: 10px;
-
 }
 
 .todo-item-checkbox-label {

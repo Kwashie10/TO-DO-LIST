@@ -1,7 +1,6 @@
 <template>
   <div id="app" class="container">
-   
- <h1  class="logo">TO-DO-LIST</h1>
+    <h1 class="logo">TO-DO-LIST</h1>
 
     <todo-list></todo-list>
   </div>
@@ -10,12 +9,11 @@
 <script>
 import TodoList from "./components/TodoList";
 
-
 export default {
-  name: 'App',
+  name: "App",
   components: {
     TodoList,
-  }
+  },
 };
 </script>
 
@@ -31,7 +29,6 @@ export default {
   padding: 10px;
   text-align: center;
   border: 5px solid black;
-
 }
 
 #app {
@@ -42,10 +39,6 @@ export default {
   font-size: 24px;
   padding: 10px;
   border-radius: 20px;
- 
-
-
-
 }
 
 .logo {
@@ -53,7 +46,5 @@ export default {
   margin: 20px auto;
   height: 75px;
   color: whitesmoke;
-
-  
 }
 </style>
